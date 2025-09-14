@@ -11,7 +11,18 @@ Setelah itu ketik di cmd/terminal go run main.go untuk menjalankan backend terse
 
 ### 2. Frontend
 untuk frontend saya menggunakan React Vite. untuk menjalankan program tersebut tinggal ketik di CMD itu npm run dev. 
-nanti program tersebut bisa jalan dan semua program akan berjalan dengan baik
+nanti program tersebut bisa jalan dan semua program akan berjalan dengan baik.
+
+### Akun
+
+untuk akun ada 2 role di sini yaitu :
+1. Admin 
+username : admin@example.com
+password : 123456
+
+2. Approver
+username : approver@example.com
+password : 123456 
 
 
 Terima Kasih.
