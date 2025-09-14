@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "f3f238e0-1bdb-4d7a-852a-362a3833a324",
+		"name": "Project Sewa Kendaraan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32475904",
+		"_collection_link": "https://personal-team1.postman.co/workspace/My-Workspace~c279392c-1eeb-4a43-82bf-8710695e965b/collection/32475904-f3f238e0-1bdb-4d7a-852a-362a3833a324?action=share&source=collection_link&creator=32475904"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get All Data User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Data User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Admin\",\n  \"email\": \"admin@example.com\",\n  \"password\": \"123456\",\n  \"role\": \"admin\",\n  \"position\": \"Manager\",\n  \"region_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Detail Data User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/users/{{id}}",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bookings",
+					"item": [
+						{
+							"name": "Get All Data Bookings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/bookings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Data Booking",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 9,\n  \"vehicle_id\": 2,\n  \"region_id\" : 1,\n  \"driver_id\": 1,\n  \"purpose\": \"Pengantaran material ke tambang A\",\n  \"start_date\": \"2025-09-15 08:00:00\",\n  \"end_date\": \"2025-09-15 17:00:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/bookings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export Excel",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/reports/bookings?start_date=2025-09-01&end_date=2025-09-10",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"reports",
+										"bookings"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2025-09-01"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-09-10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approvals",
+					"item": [
+						{
+							"name": "Add Data Approvals",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"booking_id\": 1,\n  \"approver_id\": 2,\n  \"level\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/approvals",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"approvals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Approvals",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/approvals/{{id}}",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"approvals",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Data Approvals",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4NTc2NTEsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjl9.VEB0igi5IN9UHq-brACncY3x8uRkbBrW_X7MZnXgck4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/approvals",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"approvals"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Vehicle",
+					"item": [
+						{
+							"name": "Get Data Vehicle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/vehicles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Data Vehicle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"plate_number\": \"AB1234XYZ\",\n  \"brand\": \"Toyota\",\n  \"model\": \"Avanza\",\n  \"year\": 2022,\n  \"status\": \"available\",\n  \"region_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/vehicles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Region",
+					"item": [
+						{
+							"name": "Get Data Region",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/regions",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"regions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Data Region",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Jakarta\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/regions",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"regions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Driver",
+					"item": [
+						{
+							"name": "Get Data Driver",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 3,\n  \"vehicle_id\": 2,\n  \"driver_id\": 3,\n  \"purpose\": \"Pengantaran material ke tambang A\",\n  \"start_date\": \"2025-09-15 08:00:00\",\n  \"end_date\": \"2025-09-15 17:00:00\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/drivers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drivers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Data Driver",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Driver Satu\",\n  \"license_number\": \"SIM123456\",\n  \"phone\": \"08123456789\",\n  \"region_id\": 1\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/drivers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drivers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4MTgyNTMsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.YsdSCJge_16KX_t0kC5n39wU3bbCCraIne_i6-EjzWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/reports/bookings?start_date=2025-09-01&end_date=2025-09-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"reports",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2025-09-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-09-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Approver User",
+			"item": [
+				{
+					"name": "Update Data Approval",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTc4NTQ0NTksInJvbGUiOiJhcHByb3ZlciIsInVzZXJfaWQiOjExfQ.zpUmibjowjdv13Y64oF9a06oD0a5JIJIgNcI-SvVHA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"approved\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/approvals/{{id}}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"approvals",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
